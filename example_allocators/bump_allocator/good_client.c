@@ -27,9 +27,9 @@ int main()
 	/* now try to do some bump pointer allocations */
 	for (i = 0; i < NUM_WORDS; i++)
 	{
-		int *x = (int *)bump_alloc(1 * sizeof(int));
+		int *x = (int *) bump_alloc(1 * sizeof(int));
 		if (DEBUG_PRINTF)
-			inspect_pointer(x);
+			pp_cap(x);
 		if (x)
 		{
 			*x = 42;
